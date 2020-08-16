@@ -6,7 +6,7 @@ Tags: simply,htaccess,file,editor,backup,admin
 Version: 1.0.5
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
