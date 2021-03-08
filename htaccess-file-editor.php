@@ -27,7 +27,7 @@ if ( ! is_admin() ) {
     include_once dirname(HTACCESS_FILE_EDITOR_FILE) . '/includes/admin/class-mantrabrain-admin-notices.php';
     include_once dirname(HTACCESS_FILE_EDITOR_FILE) . '/includes/admin/dashboard/class-mantrabrain-admin-dashboard.php';
 
-    $WPHE_version = '1.0.4';
+    $WPHE_version = '1.0.6';
 
 	if ( ! defined( 'WP_CONTENT_URL' ) ) {
 		if ( ! defined( 'WP_SITEURL' ) ) {
