@@ -3,10 +3,10 @@ Contributors: mantrabrain
 Author URI: https://mantrabrain.com
 Donate link: https://mantrabrain.com
 Tags: simply,htaccess,file,editor,backup,admin
-Version: 1.0.6
+Version: 1.0.7
 Requires at least: 3.0
-Tested up to: 5.7
-Stable tag: 1.0.6
+Tested up to: 5.8
+Stable tag: 1.0.7
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
