@@ -23,11 +23,11 @@ msgstr ""
 msgid "Fatal error: Plugin <strong>Htaccess File Editor</strong> is corrupted"
 msgstr "Error Fatal: Plugin <strong> WP htaccess Editor </strong> está dañado"
 
-#: pages/wphe-backup.php:7 lib/lib.pages.php:11
+#: pages/htaccess-file-editor-backup.php:7 lib/lib.pages.php:11
 msgid "Backup"
 msgstr "Copia de seguridad"
 
-#: pages/wphe-backup.php:16
+#: pages/htaccess-file-editor-backup.php:16
 msgid ""
 "Unable to restore backup! Probably the wrong setting write permissions to "
 "the files."
@@ -35,35 +35,35 @@ msgstr ""
 "¡No se puede restaurar copia de seguridad! Probablemente el ajuste "
 "incorrecto de permisos de escritura a los archivos."
 
-#: pages/wphe-backup.php:18 pages/wphe-backup.php:38
+#: pages/htaccess-file-editor-backup.php:18 pages/htaccess-file-editor-backup.php:38
 msgid "The backup file is located in the <code>wp-content</code> folder."
 msgstr ""
 "El archivo de copia de seguridad se encuentra en la carpeta <code> wp-"
 "content </code>."
 
-#: pages/wphe-backup.php:22
+#: pages/htaccess-file-editor-backup.php:22
 msgid "Backup was restored successfully"
 msgstr "La copia de seguridad se restauró con éxito"
 
-#: pages/wphe-backup.php:23
+#: pages/htaccess-file-editor-backup.php:23
 msgid "Old backup file was deleted successfully"
 msgstr "Archivo de copia de seguridad viejo se ha eliminado correctamente"
 
-#: pages/wphe-backup.php:26
+#: pages/htaccess-file-editor-backup.php:26
 msgid "Unable to restore backup!"
 msgstr "¡No se puede restaurar copia de seguridad!"
 
-#: pages/wphe-backup.php:28
+#: pages/htaccess-file-editor-backup.php:28
 msgid "This is contents of the original file, put it into a file manually"
 msgstr ""
 "Este es el contenido del archivo original, póngalo en un archivo de forma "
 "manual"
 
-#: pages/wphe-backup.php:36
+#: pages/htaccess-file-editor-backup.php:36
 msgid "Backup file was created successfully"
 msgstr "Archivo de Copia de seguridad fue creado con éxito"
 
-#: pages/wphe-backup.php:41
+#: pages/htaccess-file-editor-backup.php:41
 msgid ""
 "Unable to create backup! <code>wp-content</code> folder is not writeable! "
 "Change the permissions this folder manually!"
@@ -72,8 +72,8 @@ msgstr ""
 "carpeta no se puede escribir! ¡Cambie los permisos de esta carpeta "
 "manualmente!"
 
-#: pages/wphe-backup.php:42 pages/wphe-backup.php:52
-#: pages/wphe-dashboard.php:31 pages/wphe-dashboard.php:43
+#: pages/htaccess-file-editor-backup.php:42 pages/htaccess-file-editor-backup.php:52
+#: pages/htaccess-file-editor-dashboard.php:31 pages/htaccess-file-editor-dashboard.php:43
 msgid ""
 "Due to server configuration can not change permissions on files or create "
 "new files"
@@ -81,11 +81,11 @@ msgstr ""
 "Debido a la configuración del servidor no se pueden cambiar los permisos de "
 "los archivos o crear nuevos archivos"
 
-#: pages/wphe-backup.php:49
+#: pages/htaccess-file-editor-backup.php:49
 msgid "Backup file was successfully removed"
 msgstr "El archivo de copia de seguridad se ha eliminado correctamente"
 
-#: pages/wphe-backup.php:51
+#: pages/htaccess-file-editor-backup.php:51
 msgid ""
 "Backup file could not be removed! Probably the wrong setting write "
 "permissions to the files."
@@ -93,100 +93,100 @@ msgstr ""
 "¡El archivo de copia de seguridad no puede ser eliminado! Probablemente el "
 "ajuste incorrecto de permisos de escritura a los archivos."
 
-#: pages/wphe-backup.php:63
+#: pages/htaccess-file-editor-backup.php:63
 msgid "Do you want to restore the backup file?"
 msgstr "¿Usted desea restaurar el archivo de copia de seguridad?"
 
-#: pages/wphe-backup.php:63
+#: pages/htaccess-file-editor-backup.php:63
 msgid "Restore backup &raquo;"
 msgstr "Restaurar copia de seguridad &raquo;"
 
-#: pages/wphe-backup.php:72
+#: pages/htaccess-file-editor-backup.php:72
 msgid "Do you want to delete a backup file?"
 msgstr "¿Quiere eliminar un archivo de copia de seguridad?"
 
-#: pages/wphe-backup.php:72 pages/wphe-dashboard.php:25
+#: pages/htaccess-file-editor-backup.php:72 pages/htaccess-file-editor-dashboard.php:25
 msgid "Remove backup &raquo;"
 msgstr "Eliminar copia de seguridad &raquo;"
 
-#: pages/wphe-backup.php:78
+#: pages/htaccess-file-editor-backup.php:78
 msgid "Backup file not found..."
 msgstr "El archivo de copia de seguridad no se encuentra ..."
 
-#: pages/wphe-backup.php:86
+#: pages/htaccess-file-editor-backup.php:86
 msgid "Do you want to create a new backup file?"
 msgstr "¿Quiere crear un nuevo archivo de copia de seguridad?"
 
-#: pages/wphe-backup.php:86
+#: pages/htaccess-file-editor-backup.php:86
 msgid "Create new &raquo;"
 msgstr "Crear nuevo &raquo;"
 
-#: pages/wphe-backup.php:95 pages/wphe-dashboard.php:129
+#: pages/htaccess-file-editor-backup.php:95 pages/htaccess-file-editor-dashboard.php:129
 msgid "Information about this plugin"
 msgstr "Información sobre este plugin"
 
-#: pages/wphe-backup.php:97 pages/wphe-dashboard.php:131
+#: pages/htaccess-file-editor-backup.php:97 pages/htaccess-file-editor-dashboard.php:131
 msgid "Author"
 msgstr "Autor"
 
-#: pages/wphe-backup.php:101 pages/wphe-dashboard.php:135
+#: pages/htaccess-file-editor-backup.php:101 pages/htaccess-file-editor-dashboard.php:135
 msgid "Translators"
 msgstr "Traductores"
 
-#: pages/wphe-backup.php:108 pages/wphe-dashboard.php:142
+#: pages/htaccess-file-editor-backup.php:108 pages/htaccess-file-editor-dashboard.php:142
 msgid "Plugin"
 msgstr "Plugin"
 
-#: pages/wphe-backup.php:110 pages/wphe-dashboard.php:144
+#: pages/htaccess-file-editor-backup.php:110 pages/htaccess-file-editor-dashboard.php:144
 msgid "Version:"
 msgstr "Versión:"
 
-#: pages/wphe-backup.php:111 pages/wphe-dashboard.php:145
+#: pages/htaccess-file-editor-backup.php:111 pages/htaccess-file-editor-dashboard.php:145
 msgid "Plugin homepage:"
 msgstr "Página de inicio Plugin:"
 
-#: pages/wphe-backup.php:111 pages/wphe-dashboard.php:145
+#: pages/htaccess-file-editor-backup.php:111 pages/htaccess-file-editor-dashboard.php:145
 msgid "WordPress repository"
 msgstr "Repositorio WordPress"
 
-#: pages/wphe-backup.php:112 pages/wphe-dashboard.php:146
+#: pages/htaccess-file-editor-backup.php:112 pages/htaccess-file-editor-dashboard.php:146
 msgid "Support:"
 msgstr "Apoyo:"
 
-#: pages/wphe-backup.php:112 pages/wphe-dashboard.php:146
+#: pages/htaccess-file-editor-backup.php:112 pages/htaccess-file-editor-dashboard.php:146
 msgid "Forum"
 msgstr "Foro"
 
-#: pages/wphe-backup.php:113 pages/wphe-dashboard.php:147
+#: pages/htaccess-file-editor-backup.php:113 pages/htaccess-file-editor-dashboard.php:147
 msgid "Support for the development:"
 msgstr "Apoyo para el desarrollo:"
 
-#: pages/wphe-backup.php:113 pages/wphe-backup.php:124
-#: pages/wphe-dashboard.php:147 pages/wphe-dashboard.php:158 lib/lib.ad.php:20
+#: pages/htaccess-file-editor-backup.php:113 pages/htaccess-file-editor-backup.php:124
+#: pages/htaccess-file-editor-dashboard.php:147 pages/htaccess-file-editor-dashboard.php:158 lib/lib.ad.php:20
 msgid "Donate"
 msgstr "Donar"
 
-#: pages/wphe-backup.php:117 pages/wphe-dashboard.php:151
+#: pages/htaccess-file-editor-backup.php:117 pages/htaccess-file-editor-dashboard.php:151
 msgid "Other plugins"
 msgstr "Otros plugins"
 
-#: pages/wphe-backup.php:119 pages/wphe-dashboard.php:153
+#: pages/htaccess-file-editor-backup.php:119 pages/htaccess-file-editor-dashboard.php:153
 msgid "System Files Editor"
 msgstr "System Files Editor"
 
-#: pages/wphe-backup.php:120 pages/wphe-dashboard.php:154
+#: pages/htaccess-file-editor-backup.php:120 pages/htaccess-file-editor-dashboard.php:154
 msgid "Czech support for WordPress"
 msgstr "Soporte Checo para WordPress"
 
-#: pages/wphe-backup.php:139 pages/wphe-dashboard.php:174
+#: pages/htaccess-file-editor-backup.php:139 pages/htaccess-file-editor-dashboard.php:174
 msgid "You do not have permission to view this page"
 msgstr "No tienes permiso para ver esta página"
 
-#: pages/wphe-dashboard.php:17
+#: pages/htaccess-file-editor-dashboard.php:17
 msgid "File has been successfully changed"
 msgstr "El archivo ha cambiado correctamente"
 
-#: pages/wphe-dashboard.php:19
+#: pages/htaccess-file-editor-dashboard.php:19
 msgid ""
 "You have made changes to the htaccess file. The original file was "
 "automatically backed up (in <code>wp-content</code> folder)"
@@ -194,7 +194,7 @@ msgstr ""
 "Usted ha realizado cambios en el archivo htaccess. El archivo original se "
 "copia automáticamente (en <code> wp-content </code>)"
 
-#: pages/wphe-dashboard.php:20
+#: pages/htaccess-file-editor-dashboard.php:20
 msgid ""
 "Check the functionality of your site (the links to the articles or "
 "categories)."
@@ -202,32 +202,32 @@ msgstr ""
 "Compruebe la funcionalidad de su sitio web (los enlaces a los artículos o "
 "categorías)."
 
-#: pages/wphe-dashboard.php:20
+#: pages/htaccess-file-editor-dashboard.php:20
 msgid ""
 "If something is not working properly restore the original file from backup"
 msgstr ""
 "Si algo no está funcionando adecuadamente restaurar el archivo original "
 "desde la copia de seguridad"
 
-#: pages/wphe-dashboard.php:25
+#: pages/htaccess-file-editor-dashboard.php:25
 msgid "If everything works properly, you can delete the backup file:"
 msgstr ""
 "Si todo funciona correctamente, puede eliminar el archivo de copia de "
 "seguridad:"
 
-#: pages/wphe-dashboard.php:25 pages/wphe-dashboard.php:66
+#: pages/htaccess-file-editor-dashboard.php:25 pages/htaccess-file-editor-dashboard.php:66
 msgid "or"
 msgstr "O"
 
-#: pages/wphe-dashboard.php:25
+#: pages/htaccess-file-editor-dashboard.php:25
 msgid "restore the original file from backup"
 msgstr "restaurar el archivo original desde la copia de seguridad"
 
-#: pages/wphe-dashboard.php:30 pages/wphe-dashboard.php:34
+#: pages/htaccess-file-editor-dashboard.php:30 pages/htaccess-file-editor-dashboard.php:34
 msgid "The file could not be saved!"
 msgstr "¡El archivo no se puede guardar!"
 
-#: pages/wphe-dashboard.php:35
+#: pages/htaccess-file-editor-dashboard.php:35
 msgid ""
 "Unable to create backup of the original file! <code>wp-content</code> folder "
 "is not writeable! Change the permissions this folder!"
@@ -236,19 +236,19 @@ msgstr ""
 "content </code> ¡La carpeta no se puede escribir! ¡Cambie los permisos de "
 "esta carpeta!"
 
-#: pages/wphe-dashboard.php:42
+#: pages/htaccess-file-editor-dashboard.php:42
 msgid "Htaccess file is not created."
 msgstr "No se crea el archivo htaccess."
 
-#: pages/wphe-dashboard.php:45
+#: pages/htaccess-file-editor-dashboard.php:45
 msgid "Htaccess file was successfully created."
 msgstr "El archivo Htaccess sido creado con éxito."
 
-#: pages/wphe-dashboard.php:46
+#: pages/htaccess-file-editor-dashboard.php:46
 msgid "View new Htaccess file"
 msgstr "Ver nuevo archivo htaccess"
 
-#: pages/wphe-dashboard.php:53
+#: pages/htaccess-file-editor-dashboard.php:53
 msgid ""
 "Backup file could not be removed! <code>wp-content</code> folder is not "
 "writeable! Change the permissions this folder!"
@@ -257,11 +257,11 @@ msgstr ""
 "</code> ¡La carpeta no se puede escribir! ¡Cambie los permisos de esta "
 "carpeta!"
 
-#: pages/wphe-dashboard.php:55
+#: pages/htaccess-file-editor-dashboard.php:55
 msgid "Backup file has been successfully removed."
 msgstr "El archivo de copia de seguridad se ha eliminado con éxito"
 
-#: pages/wphe-dashboard.php:60
+#: pages/htaccess-file-editor-dashboard.php:60
 msgid ""
 "Using this editor you can easily modify your htaccess file without having to "
 "use an FTP client."
@@ -269,7 +269,7 @@ msgstr ""
 "El uso de este editor puede modificar fácilmente su archivo htaccess sin "
 "tener que utilizar un cliente de FTP."
 
-#: pages/wphe-dashboard.php:61
+#: pages/htaccess-file-editor-dashboard.php:61
 msgid ""
 "<strong>WARNING:</strong> Any error in this file may cause malfunction of "
 "your site!"
@@ -277,52 +277,52 @@ msgstr ""
 "<strong>ADVERTENCIA:</strong> ¡Cualquier error en este archivo podrían "
 "causar un mal funcionamiento de su sitio!"
 
-#: pages/wphe-dashboard.php:62
+#: pages/htaccess-file-editor-dashboard.php:62
 msgid ""
 "Edit htaccess file should therefore be performed only by experienced users!"
 msgstr ""
 "Por lo tanto, ¡editar el archivo htaccess sólo debe ser efectuado por "
 "usuarios experimentados!"
 
-#: pages/wphe-dashboard.php:65
+#: pages/htaccess-file-editor-dashboard.php:65
 msgid "Information for editing htaccess file"
 msgstr "Información para la edición del archivo htaccess"
 
-#: pages/wphe-dashboard.php:66
+#: pages/htaccess-file-editor-dashboard.php:66
 msgid "For more information on possible adjustments to this file, please visit"
 msgstr ""
 "Para obtener más información sobre los posibles ajustes en el archivo, por "
 "favor visite"
 
-#: pages/wphe-dashboard.php:67
+#: pages/htaccess-file-editor-dashboard.php:67
 msgid "Interesting tips and guides can also be found on "
 msgstr "Interesantes consejos y guías también se pueden encontrar en"
 
-#: pages/wphe-dashboard.php:68
+#: pages/htaccess-file-editor-dashboard.php:68
 msgid "Or use the Google search."
 msgstr "O utilizar la búsqueda de Google."
 
-#: pages/wphe-dashboard.php:74
+#: pages/htaccess-file-editor-dashboard.php:74
 msgid "Htaccess file does not exists!"
 msgstr "¡El archivo htaccess no  existe!"
 
-#: pages/wphe-dashboard.php:82 pages/wphe-dashboard.php:91
+#: pages/htaccess-file-editor-dashboard.php:82 pages/htaccess-file-editor-dashboard.php:91
 msgid "Htaccess file cannot read!"
 msgstr "¡El archivo htaccess no se puede leer!"
 
-#: pages/wphe-dashboard.php:106
+#: pages/htaccess-file-editor-dashboard.php:106
 msgid "Content of the Htaccess file"
 msgstr "Contenido del archivo htaccess"
 
-#: pages/wphe-dashboard.php:108
+#: pages/htaccess-file-editor-dashboard.php:108
 msgid "Save file &raquo;"
 msgstr "Guardar archivo &raquo;"
 
-#: pages/wphe-dashboard.php:119
+#: pages/htaccess-file-editor-dashboard.php:119
 msgid "Create new <code>.htaccess</code> file?"
 msgstr "¿Crear nuevo archivo<code> htaccess </code>?"
 
-#: pages/wphe-dashboard.php:119
+#: pages/htaccess-file-editor-dashboard.php:119
 msgid "Create &raquo;"
 msgstr "Create &raquo;"
 

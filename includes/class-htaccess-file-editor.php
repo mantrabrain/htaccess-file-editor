@@ -166,6 +166,7 @@ final class Htaccess_File_Editor
 
 
         include_once HTACCESS_FILE_EDITOR_ABSPATH . '/includes/admin/dashboard/class-mantrabrain-admin-dashboard.php';
+        include_once HTACCESS_FILE_EDITOR_ABSPATH . '/includes/class-htaccess-file-editor-actions.php';
         include_once HTACCESS_FILE_EDITOR_ABSPATH . '/includes/functions.php';
         include_once HTACCESS_FILE_EDITOR_ABSPATH . '/includes/class-htaccess-file-editor-hooks.php';
 

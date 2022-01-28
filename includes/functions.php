@@ -72,8 +72,8 @@ function htaccess_file_editor_create_backup()
 
 function htaccess_file_editor_create_secure_wpcontent()
 {
-    $wphe_secure_path = ABSPATH . 'wp-content/.htaccess';
-    $wphe_secure_text = '
+    $htaccess_file_editor_secure_path = ABSPATH . 'wp-content/.htaccess';
+    $htaccess_file_editor_secure_text = '
 # Htaccess File Editor - Secure backups
 <files htaccess.backup>
 order allow,deny
@@ -82,35 +82,35 @@ deny from all
 ';
 
     if (is_readable(ABSPATH . 'wp-content/.htaccess')) {
-        $wphe_secure_content = @file_get_contents(ABSPATH . 'wp-content/.htaccess');
+        $htaccess_file_editor_secure_content = @file_get_contents(ABSPATH . 'wp-content/.htaccess');
 
-        if ($wphe_secure_content !== false) {
-            if (strpos($wphe_secure_content, 'Secure backups') === false) {
-                unset($wphe_secure_content);
-                $wphe_create_sec = @file_put_contents(ABSPATH . 'wp-content/.htaccess', $wphe_secure_text, FILE_APPEND | LOCK_EX);
-                if ($wphe_create_sec !== false) {
-                    unset($wphe_secure_text);
-                    unset($wphe_create_sec);
+        if ($htaccess_file_editor_secure_content !== false) {
+            if (strpos($htaccess_file_editor_secure_content, 'Secure backups') === false) {
+                unset($htaccess_file_editor_secure_content);
+                $htaccess_file_editor_create_sec = @file_put_contents(ABSPATH . 'wp-content/.htaccess', $htaccess_file_editor_secure_text, FILE_APPEND | LOCK_EX);
+                if ($htaccess_file_editor_create_sec !== false) {
+                    unset($htaccess_file_editor_secure_text);
+                    unset($htaccess_file_editor_create_sec);
                     return true;
                 } else {
-                    unset($wphe_secure_text);
-                    unset($wphe_create_sec);
+                    unset($htaccess_file_editor_secure_text);
+                    unset($htaccess_file_editor_create_sec);
                     return false;
                 }
             } else {
-                unset($wphe_secure_content);
+                unset($htaccess_file_editor_secure_content);
                 return true;
             }
         } else {
-            unset($wphe_secure_content);
+            unset($htaccess_file_editor_secure_content);
             return false;
         }
     } else {
         if (file_exists(ABSPATH . 'wp-content/.htaccess')) {
             return false;
         } else {
-            $wphe_create_sec = @file_put_contents(ABSPATH . 'wp-content/.htaccess', $wphe_secure_text, LOCK_EX);
-            if ($wphe_create_sec !== false) {
+            $htaccess_file_editor_create_sec = @file_put_contents(ABSPATH . 'wp-content/.htaccess', $htaccess_file_editor_secure_text, LOCK_EX);
+            if ($htaccess_file_editor_create_sec !== false) {
                 return true;
             } else {
                 return false;
@@ -122,12 +122,12 @@ deny from all
 
 function htaccess_file_editor_restore_backup()
 {
-    $wphe_backup_path = ABSPATH . 'wp-content/htaccess.backup';
+    $htaccess_file_editor_backup_path = ABSPATH . 'wp-content/htaccess.backup';
     $WPHE_orig_path = ABSPATH . '.htaccess';
     @clearstatcache();
 
-    if (!file_exists($wphe_backup_path)) {
-        unset($wphe_backup_path);
+    if (!file_exists($htaccess_file_editor_backup_path)) {
+        unset($htaccess_file_editor_backup_path);
         unset($WPHE_orig_path);
         return false;
     } else {
@@ -139,18 +139,18 @@ function htaccess_file_editor_restore_backup()
                 @unlink($WPHE_orig_path);
             }
         }
-        $wphe_htaccess_content_backup = @file_get_contents($wphe_backup_path, false, NULL);
-        if (htaccess_file_editor_write_new_htaccess($wphe_htaccess_content_backup) === false) {
-            unset($wphe_success);
+        $htaccess_file_editor_htaccess_content_backup = @file_get_contents($htaccess_file_editor_backup_path, false, NULL);
+        if (htaccess_file_editor_write_new_htaccess($htaccess_file_editor_htaccess_content_backup) === false) {
+            unset($htaccess_file_editor_success);
             unset($WPHE_orig_path);
-            unset($wphe_backup_path);
-            return $wphe_htaccess_content_backup;
+            unset($htaccess_file_editor_backup_path);
+            return $htaccess_file_editor_htaccess_content_backup;
         } else {
             htaccess_file_editor_delete_backup();
-            unset($wphe_success);
-            unset($wphe_htaccess_content_backup);
+            unset($htaccess_file_editor_success);
+            unset($htaccess_file_editor_htaccess_content_backup);
             unset($WPHE_orig_path);
-            unset($wphe_backup_path);
+            unset($htaccess_file_editor_backup_path);
             return true;
         }
     }
@@ -159,28 +159,28 @@ function htaccess_file_editor_restore_backup()
 
 function htaccess_file_editor_delete_backup()
 {
-    $wphe_backup_path = ABSPATH . 'wp-content/htaccess.backup';
+    $htaccess_file_editor_backup_path = ABSPATH . 'wp-content/htaccess.backup';
     @clearstatcache();
 
-    if (file_exists($wphe_backup_path)) {
-        if (is_writable($wphe_backup_path)) {
-            @unlink($wphe_backup_path);
+    if (file_exists($htaccess_file_editor_backup_path)) {
+        if (is_writable($htaccess_file_editor_backup_path)) {
+            @unlink($htaccess_file_editor_backup_path);
         } else {
-            @chmod($wphe_backup_path, 0666);
-            @unlink($wphe_backup_path);
+            @chmod($htaccess_file_editor_backup_path, 0666);
+            @unlink($htaccess_file_editor_backup_path);
         }
 
         @clearstatcache();
 
-        if (file_exists($wphe_backup_path)) {
-            unset($wphe_backup_path);
+        if (file_exists($htaccess_file_editor_backup_path)) {
+            unset($htaccess_file_editor_backup_path);
             return false;
         } else {
-            unset($wphe_backup_path);
+            unset($htaccess_file_editor_backup_path);
             return true;
         }
     } else {
-        unset($wphe_backup_path);
+        unset($htaccess_file_editor_backup_path);
         return true;
     }
 }

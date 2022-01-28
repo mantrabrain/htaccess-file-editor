@@ -32,7 +32,7 @@ class Htaccess_File_Editor_Hooks
 
     public function backup_page()
     {
-        include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/backup.php';
+        include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/backup-page.php';
 
     }
 
