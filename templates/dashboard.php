@@ -115,7 +115,8 @@ $htaccess_file_editor_origin_path = ABSPATH . '.htaccess';
                         <?php wp_nonce_field('htaccess_file_editor_save', 'htaccess_file_editor_save'); ?>
                         <h3 class="htaccess-file-editor-title"><?php _e('Content of the Htaccess file', 'htaccess-file-editor'); ?></h3>
                         <textarea name="ht_content" class="htaccess-file-editor-textarea"
-                                  wrap="off"><?php echo $WPHE_htaccess_content; ?></textarea>
+                                  wrap="off" id="htaccess-file-editor-textarea"
+                                  aria-describedby="editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4"><?php echo $WPHE_htaccess_content; ?></textarea>
                         <p class="submit"><input type="submit" class="button button-primary" name="submit"
                                                  value="<?php _e('Save file &raquo;', 'htaccess-file-editor'); ?>"/></p>
                     </form>

@@ -24,10 +24,18 @@ class Htaccess_File_Editor_Hooks
 
     }
 
-    function scripts()
+    function scripts($hooks)
     {
-        wp_enqueue_style('htaccess-file-editor-style', HTACCESS_FILE_EDITOR_PLUGIN_URI . '/assets/css/admin.css', array(), HTACCESS_FILE_EDITOR_VERSION);
+        if ($hooks != 'toplevel_page_htaccess-file-editor' && $hooks != 'toplevel_page_htaccess-file-editor_backup') {
+            return;
+        }
+        wp_enqueue_style('htaccess-file-editor-style', HTACCESS_FILE_EDITOR_PLUGIN_URI . '/assets/css/admin.css', array('wp-codemirror'), HTACCESS_FILE_EDITOR_VERSION);
 
+        wp_enqueue_script('htaccess-file-editor-script', HTACCESS_FILE_EDITOR_PLUGIN_URI . '/assets/js/htaccess-file-editor.js', array('jquery', 'wp-theme-plugin-editor'), HTACCESS_FILE_EDITOR_VERSION);
+
+        $settings['codeEditor'] = wp_enqueue_code_editor(array('type' => 'text/css'));
+
+        wp_localize_script('htaccess-file-editor-script', 'htaccess_file_editor_settings', $settings);
     }
 
     public function backup_page()
