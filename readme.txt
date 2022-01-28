@@ -3,10 +3,10 @@ Contributors: mantrabrain
 Author URI: https://mantrabrain.com
 Donate link: https://mantrabrain.com
 Tags: simply,htaccess,file,editor,backup,admin
-Version: 1.0.7
+Version: 1.0.9
 Requires at least: 3.0
-Tested up to: 5.8
-Stable tag: 1.0.7
+Tested up to: 5.9
+Stable tag: 1.0.9
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
@@ -33,16 +33,5 @@ Try to restore the original backup file. If restoration is not possible with thi
 
 == Changelog ==
 
-= 1.0.6 - 2021/03/08 =
-* Version tested
-
-= 1.0.5 - 2020/08/16 =
-* Version tested
-= 1.0.4 - 2020/02/20 =
-* Version tested
-= 1.0.3 - 2019/07/21 =
-* Minor issue fixd & dashboard widget added
-= 1.0.1 - 2018/03/05 =
-* Warning fixed
-= 1.0.0 =
-* Initial Release
+= 1.0.9 - 2022/01/28 =
+* WordPress 5.9 version tested
