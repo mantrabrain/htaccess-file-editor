@@ -1,4 +1,4 @@
-=== Htaccess File Editor ===
+=== Htaccess File Editor - Easily Edit, Backup, Restore .htaccess file ===
 Contributors: mantrabrain
 Author URI: https://mantrabrain.com
 Donate link: https://mantrabrain.com

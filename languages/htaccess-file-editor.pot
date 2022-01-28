@@ -1,0 +1,274 @@
+# Copyright (C) 2022 Mantrabrain
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Htaccess File Editor 1.0.8\n"
+"Report-Msgid-Bugs-To: mantrabrain@gmail.com\n"
+"POT-Creation-Date: 2022-01-28 11:27:59+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:50
+msgid "Latest News From MantraBrain Blog"
+msgstr ""
+
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:77
+msgid "New Themes"
+msgstr ""
+
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:79
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:85
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:90
+msgid "opens in a new tab"
+msgstr ""
+
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:83
+msgid "Blog Posts"
+msgstr ""
+
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:88
+msgid "Main Site"
+msgstr ""
+
+#: includes/class-htaccess-file-editor.php:60
+msgid "Cloning is forbidden."
+msgstr ""
+
+#: includes/class-htaccess-file-editor.php:70
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: templates/backup-form.php:9
+msgid "Do you want to restore the backup file?"
+msgstr ""
+
+#: templates/backup-form.php:12
+msgid "Restore backup &raquo;"
+msgstr ""
+
+#: templates/backup-form.php:21
+msgid "Do you want to delete a backup file?"
+msgstr ""
+
+#: templates/backup-form.php:24 templates/dashboard.php:32
+msgid "Remove backup &raquo;"
+msgstr ""
+
+#: templates/backup-form.php:30
+msgid "Backup file not found..."
+msgstr ""
+
+#: templates/backup-form.php:38
+msgid "Do you want to create a new backup file?"
+msgstr ""
+
+#: templates/backup-form.php:41
+msgid "Create new &raquo;"
+msgstr ""
+
+#: templates/backup-page.php:13
+msgid "Htaccess File Editor -"
+msgstr ""
+
+#: templates/backup-page.php:13
+msgid "Backup"
+msgstr ""
+
+#: templates/dashboard.php:4
+msgid "You do not have permission to view this page"
+msgstr ""
+
+#: templates/dashboard.php:19
+msgid "File has been successfully changed"
+msgstr ""
+
+#: templates/dashboard.php:21
+msgid ""
+"You have made changes to the htaccess file. The original file was "
+"automatically backed up (in <code>wp-content</code> folder)"
+msgstr ""
+
+#: templates/dashboard.php:24
+msgid ""
+"Check the functionality of your site (the links to the articles or "
+"categories)."
+msgstr ""
+
+#: templates/dashboard.php:24
+msgid "If something is not working properly restore the original file from backup"
+msgstr ""
+
+#: templates/dashboard.php:30
+msgid "If everything works properly, you can delete the backup file:"
+msgstr ""
+
+#: templates/dashboard.php:32 templates/dashboard.php:76
+msgid "or"
+msgstr ""
+
+#: templates/dashboard.php:34
+msgid "restore the original file from backup"
+msgstr ""
+
+#: templates/dashboard.php:40 templates/dashboard.php:44
+msgid "The file could not be saved!"
+msgstr ""
+
+#: templates/dashboard.php:41 templates/dashboard.php:52
+#: templates/notices/backup-failed.php:3 templates/notices/delete-failed.php:3
+msgid ""
+"Due to server configuration can not change permissions on files or create "
+"new files"
+msgstr ""
+
+#: templates/dashboard.php:45
+msgid ""
+"Unable to create backup of the original file! <code>wp-content</code> "
+"folder is not writeable! Change the permissions this folder!"
+msgstr ""
+
+#: templates/dashboard.php:51
+msgid "Htaccess file is not created."
+msgstr ""
+
+#: templates/dashboard.php:54
+msgid "Htaccess file was successfully created."
+msgstr ""
+
+#: templates/dashboard.php:55
+msgid "View new Htaccess file"
+msgstr ""
+
+#: templates/dashboard.php:60
+msgid ""
+"Backup file could not be removed! <code>wp-content</code> folder is not "
+"writeable! Change the permissions this folder!"
+msgstr ""
+
+#: templates/dashboard.php:62
+msgid "Backup file has been successfully removed."
+msgstr ""
+
+#: templates/dashboard.php:67
+msgid ""
+"Using this editor you can easily modify your htaccess file without having "
+"to use an FTP client."
+msgstr ""
+
+#: templates/dashboard.php:68
+msgid ""
+"<strong>WARNING:</strong> Any error in this file may cause malfunction of "
+"your site!"
+msgstr ""
+
+#: templates/dashboard.php:70
+msgid "Edit htaccess file should therefore be performed only by experienced users!"
+msgstr ""
+
+#: templates/dashboard.php:73
+msgid "Information for editing htaccess file"
+msgstr ""
+
+#: templates/dashboard.php:74
+msgid "For more information on possible adjustments to this file, please visit"
+msgstr ""
+
+#: templates/dashboard.php:80
+msgid "use the Google search."
+msgstr ""
+
+#: templates/dashboard.php:85
+msgid "Htaccess file does not exists!"
+msgstr ""
+
+#: templates/dashboard.php:92 templates/dashboard.php:101
+msgid "Htaccess file cannot read!"
+msgstr ""
+
+#: templates/dashboard.php:116
+msgid "Content of the Htaccess file"
+msgstr ""
+
+#: templates/dashboard.php:121
+msgid "Save file &raquo;"
+msgstr ""
+
+#: templates/dashboard.php:132
+msgid "Create new <code>.htaccess</code> file?"
+msgstr ""
+
+#: templates/dashboard.php:134
+msgid "Create &raquo;"
+msgstr ""
+
+#: templates/notices/backup-failed.php:2
+msgid ""
+"Unable to create backup! <code>wp-content</code> folder is not writeable! "
+"Change the permissions this folder manually!"
+msgstr ""
+
+#: templates/notices/backup-success.php:2
+msgid "Backup file was created successfully"
+msgstr ""
+
+#: templates/notices/backup-success.php:4
+#: templates/notices/restore-failed.php:6
+msgid "The backup file is located in the <code>wp-content</code> folder."
+msgstr ""
+
+#: templates/notices/delete-failed.php:2
+msgid ""
+"Backup file could not be removed! Probably the wrong setting write "
+"permissions to the files."
+msgstr ""
+
+#: templates/notices/delete-success.php:2
+msgid "Backup file was successfully removed"
+msgstr ""
+
+#: templates/notices/restore-failed.php:4
+msgid ""
+"Unable to restore backup! Probably the wrong setting write permissions to "
+"the files."
+msgstr ""
+
+#: templates/notices/restore-failed.php:10
+msgid "Unable to restore backup!"
+msgstr ""
+
+#: templates/notices/restore-failed.php:12
+msgid "This is contents of the original file, put it into a file manually"
+msgstr ""
+
+#: templates/notices/restore-success.php:2
+msgid "Backup was restored successfully"
+msgstr ""
+
+#: templates/notices/restore-success.php:3
+msgid "Old backup file was deleted successfully"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Htaccess File Editor"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://mantrabrain.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Simple editor htaccess file without using FTP client."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mantrabrain"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://mantrabrain.com"
+msgstr ""
