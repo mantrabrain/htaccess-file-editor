@@ -1,12 +1,19 @@
-=== Htaccess File Editor ===
+=== Htaccess File Editor - Easily Edit, Backup, Restore .htaccess file ===
 Contributors: mantrabrain
 Author URI: https://mantrabrain.com
 Donate link: https://mantrabrain.com
 Tags: simply,htaccess,file,editor,backup,admin
+<<<<<<< HEAD
 Version: 1.0.8
 Requires at least: 3.0
 Tested up to: 5.8
 Stable tag: 1.0.8
+=======
+Version: 1.0.9
+Requires at least: 3.0
+Tested up to: 5.9
+Stable tag: 1.0.9
+>>>>>>> development
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
@@ -33,6 +40,7 @@ Try to restore the original backup file. If restoration is not possible with thi
 
 == Changelog ==
 
+<<<<<<< HEAD
 = 1.0.0 - 2022/01/09 =
 * Warning issue solved
 
@@ -49,3 +57,7 @@ Try to restore the original backup file. If restoration is not possible with thi
 * Warning fixed
 = 1.0.0 =
 * Initial Release
+=======
+= 1.0.9 - 2022/01/28 =
+* WordPress 5.9 version tested
+>>>>>>> development

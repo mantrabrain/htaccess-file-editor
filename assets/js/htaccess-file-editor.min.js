@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){wp.codeEditor.initialize(e("#htaccess-file-editor-textarea"),htaccess_file_editor_settings)});

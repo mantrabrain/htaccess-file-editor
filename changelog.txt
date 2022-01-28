@@ -1,0 +1,14 @@
+
+= 1.0.6 - 2021/03/08 =
+* Version tested
+
+= 1.0.5 - 2020/08/16 =
+* Version tested
+= 1.0.4 - 2020/02/20 =
+* Version tested
+= 1.0.3 - 2019/07/21 =
+* Minor issue fixd & dashboard widget added
+= 1.0.1 - 2018/03/05 =
+* Warning fixed
+= 1.0.0 =
+* Initial Release
