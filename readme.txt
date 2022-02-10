@@ -14,7 +14,7 @@ Simple editor htaccess file without using FTP client.
 == Description ==
 
 Htaccess File Editor is a fast, safe and simple yet perfect to edit the WordPress site's *.htaccess* file from admin panel. You can create a backup of your *.htaccess* file and can be restored from WordPress Dashboard.
-You can create a Backup from Htaccess --> Backup Menu. Also you can edit from Htaccess Menu.
+You can create a Backup from Htaccess --> Backup Menu and you can edit .htaccess file from Htaccess Menu.
 **This plugin should be used only by experienced users!**
 
 == Features ==
