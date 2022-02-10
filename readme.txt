@@ -19,7 +19,7 @@ You can create a Backup from Htaccess --> Backup Menu and you can edit .htaccess
 
 == Features ==
 1. Edit .htaccess file easily
-2. Create Backup .htaccess file
+2. Create Backup of .htaccess file
 3. Restore  old .htaccess backup
 
 == Installation ==
