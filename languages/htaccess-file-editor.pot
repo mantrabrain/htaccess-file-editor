@@ -2,9 +2,9 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Htaccess File Editor 1.0.8\n"
+"Project-Id-Version: Htaccess File Editor 1.0.11\n"
 "Report-Msgid-Bugs-To: mantrabrain@gmail.com\n"
-"POT-Creation-Date: 2022-01-28 11:27:59+00:00\n"
+"POT-Creation-Date: 2022-02-10 07:42:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,33 +13,55 @@ msgstr ""
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:50
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:49
 msgid "Latest News From MantraBrain Blog"
 msgstr ""
 
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:77
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:80
 msgid "New Themes"
 msgstr ""
 
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:79
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:85
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:90
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:82
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:88
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:94
 msgid "opens in a new tab"
 msgstr ""
 
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:83
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:86
 msgid "Blog Posts"
 msgstr ""
 
-#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:88
+#: includes/admin/dashboard/class-mantrabrain-admin-dashboard.php:92
 msgid "Main Site"
 msgstr ""
 
-#: includes/class-htaccess-file-editor.php:60
+#: includes/class-htaccess-file-editor-ebwp-notice.php:258
+msgid ""
+"By clicking \"Install & Activate\" button, you agree to install and "
+"activate \"Everest Backup\" plugin in your website."
+msgstr ""
+
+#: includes/class-htaccess-file-editor-ebwp-notice.php:269
+msgid "*This field is required!"
+msgstr ""
+
+#: includes/class-htaccess-file-editor-ebwp-notice.php:294
+msgid "Install & Activate"
+msgstr ""
+
+#: includes/class-htaccess-file-editor-ebwp-notice.php:295
+msgid "Remind me later"
+msgstr ""
+
+#: includes/class-htaccess-file-editor-ebwp-notice.php:305
+msgid "Activate Plugin"
+msgstr ""
+
+#: includes/class-htaccess-file-editor.php:58
 msgid "Cloning is forbidden."
 msgstr ""
 
-#: includes/class-htaccess-file-editor.php:70
+#: includes/class-htaccess-file-editor.php:67
 msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
@@ -55,7 +77,7 @@ msgstr ""
 msgid "Do you want to delete a backup file?"
 msgstr ""
 
-#: templates/backup-form.php:24 templates/dashboard.php:32
+#: templates/backup-form.php:24 templates/dashboard.php:34
 msgid "Remove backup &raquo;"
 msgstr ""
 
@@ -79,130 +101,130 @@ msgstr ""
 msgid "Backup"
 msgstr ""
 
-#: templates/dashboard.php:4
+#: templates/dashboard.php:6
 msgid "You do not have permission to view this page"
 msgstr ""
 
-#: templates/dashboard.php:19
+#: templates/dashboard.php:21
 msgid "File has been successfully changed"
 msgstr ""
 
-#: templates/dashboard.php:21
+#: templates/dashboard.php:23
 msgid ""
 "You have made changes to the htaccess file. The original file was "
 "automatically backed up (in <code>wp-content</code> folder)"
 msgstr ""
 
-#: templates/dashboard.php:24
+#: templates/dashboard.php:26
 msgid ""
 "Check the functionality of your site (the links to the articles or "
 "categories)."
 msgstr ""
 
-#: templates/dashboard.php:24
+#: templates/dashboard.php:26
 msgid "If something is not working properly restore the original file from backup"
 msgstr ""
 
-#: templates/dashboard.php:30
+#: templates/dashboard.php:32
 msgid "If everything works properly, you can delete the backup file:"
 msgstr ""
 
-#: templates/dashboard.php:32 templates/dashboard.php:76
+#: templates/dashboard.php:34 templates/dashboard.php:78
 msgid "or"
 msgstr ""
 
-#: templates/dashboard.php:34
+#: templates/dashboard.php:36
 msgid "restore the original file from backup"
 msgstr ""
 
-#: templates/dashboard.php:40 templates/dashboard.php:44
+#: templates/dashboard.php:42 templates/dashboard.php:46
 msgid "The file could not be saved!"
 msgstr ""
 
-#: templates/dashboard.php:41 templates/dashboard.php:52
+#: templates/dashboard.php:43 templates/dashboard.php:54
 #: templates/notices/backup-failed.php:3 templates/notices/delete-failed.php:3
 msgid ""
 "Due to server configuration can not change permissions on files or create "
 "new files"
 msgstr ""
 
-#: templates/dashboard.php:45
+#: templates/dashboard.php:47
 msgid ""
 "Unable to create backup of the original file! <code>wp-content</code> "
 "folder is not writeable! Change the permissions this folder!"
 msgstr ""
 
-#: templates/dashboard.php:51
+#: templates/dashboard.php:53
 msgid "Htaccess file is not created."
 msgstr ""
 
-#: templates/dashboard.php:54
+#: templates/dashboard.php:56
 msgid "Htaccess file was successfully created."
 msgstr ""
 
-#: templates/dashboard.php:55
+#: templates/dashboard.php:57
 msgid "View new Htaccess file"
 msgstr ""
 
-#: templates/dashboard.php:60
+#: templates/dashboard.php:62
 msgid ""
 "Backup file could not be removed! <code>wp-content</code> folder is not "
 "writeable! Change the permissions this folder!"
 msgstr ""
 
-#: templates/dashboard.php:62
+#: templates/dashboard.php:64
 msgid "Backup file has been successfully removed."
 msgstr ""
 
-#: templates/dashboard.php:67
+#: templates/dashboard.php:69
 msgid ""
 "Using this editor you can easily modify your htaccess file without having "
 "to use an FTP client."
 msgstr ""
 
-#: templates/dashboard.php:68
+#: templates/dashboard.php:70
 msgid ""
 "<strong>WARNING:</strong> Any error in this file may cause malfunction of "
 "your site!"
 msgstr ""
 
-#: templates/dashboard.php:70
+#: templates/dashboard.php:72
 msgid "Edit htaccess file should therefore be performed only by experienced users!"
 msgstr ""
 
-#: templates/dashboard.php:73
+#: templates/dashboard.php:75
 msgid "Information for editing htaccess file"
 msgstr ""
 
-#: templates/dashboard.php:74
+#: templates/dashboard.php:76
 msgid "For more information on possible adjustments to this file, please visit"
 msgstr ""
 
-#: templates/dashboard.php:80
+#: templates/dashboard.php:82
 msgid "use the Google search."
 msgstr ""
 
-#: templates/dashboard.php:85
+#: templates/dashboard.php:87
 msgid "Htaccess file does not exists!"
 msgstr ""
 
-#: templates/dashboard.php:92 templates/dashboard.php:101
+#: templates/dashboard.php:94 templates/dashboard.php:103
 msgid "Htaccess file cannot read!"
 msgstr ""
 
-#: templates/dashboard.php:116
+#: templates/dashboard.php:118
 msgid "Content of the Htaccess file"
 msgstr ""
 
-#: templates/dashboard.php:121
+#: templates/dashboard.php:123
 msgid "Save file &raquo;"
 msgstr ""
 
-#: templates/dashboard.php:132
+#: templates/dashboard.php:134
 msgid "Create new <code>.htaccess</code> file?"
 msgstr ""
 
-#: templates/dashboard.php:134
+#: templates/dashboard.php:136
 msgid "Create &raquo;"
 msgstr ""
 

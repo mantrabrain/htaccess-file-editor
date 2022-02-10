@@ -1,65 +1,60 @@
 <?php
 
-class Htaccess_File_Editor_Actions
-{
-    public function __construct()
-    {
-        add_action('htaccess_file_editor_restore_backup', array($this, 'restore_backup'));
-        add_action('htaccess_file_editor_create_backup', array($this, 'create_backup'));
-        add_action('htaccess_file_editor_delete_backup', array($this, 'delete_backup'));
-        add_action('htaccess_file_editor_backup_form', array($this, 'backup_form'));
-    }
+class Htaccess_File_Editor_Actions {
 
-    public function restore_backup()
-    {
-        $htaccess_file_editor_restore_result = htaccess_file_editor_restore_backup();
+	public function __construct() {
+		add_action( 'htaccess_file_editor_restore_backup', array( $this, 'restore_backup' ) );
+		add_action( 'htaccess_file_editor_create_backup', array( $this, 'create_backup' ) );
+		add_action( 'htaccess_file_editor_delete_backup', array( $this, 'delete_backup' ) );
+		add_action( 'htaccess_file_editor_backup_form', array( $this, 'backup_form' ) );
+	}
 
-        if ($htaccess_file_editor_restore_result === true) {
+	public function restore_backup() {
+		$htaccess_file_editor_restore_result = htaccess_file_editor_restore_backup();
 
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/restore-success.php';
+		if ( $htaccess_file_editor_restore_result === true ) {
 
-        } else {
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/restore-success.php';
 
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/restore-failed.php';
+		} else {
 
-        }
-    }
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/restore-failed.php';
 
-    public function create_backup()
-    {
-        $create_backup_status = htaccess_file_editor_create_backup();
+		}
+	}
 
-        if ($create_backup_status) {
+	public function create_backup() {
+		$create_backup_status = htaccess_file_editor_create_backup();
 
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/backup-success.php';
+		if ( $create_backup_status ) {
 
-        } else {
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/backup-failed.php';
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/backup-success.php';
 
-        }
+		} else {
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/backup-failed.php';
 
-    }
+		}
 
-    public function delete_backup()
-    {
-        $delete_status = htaccess_file_editor_delete_backup();
+	}
 
-        if ($delete_status) {
+	public function delete_backup() {
+		$delete_status = htaccess_file_editor_delete_backup();
 
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/delete-success.php';
+		if ( $delete_status ) {
 
-        } else {
-            include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/delete-failed.php';
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/delete-success.php';
 
-        }
+		} else {
+			include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/notices/delete-failed.php';
 
-    }
+		}
 
-    public function backup_form()
-    {
-        include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/backup-form.php';
+	}
 
-    }
+	public function backup_form() {
+		include_once HTACCESS_FILE_EDITOR_ABSPATH . '/templates/backup-form.php';
+
+	}
 }
 
 new Htaccess_File_Editor_Actions();
