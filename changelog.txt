@@ -1,7 +1,7 @@
-
+= 1.0.10 - 2022/01/28 =
+* WordPress 5.9 version tested
 = 1.0.6 - 2021/03/08 =
 * Version tested
-
 = 1.0.5 - 2020/08/16 =
 * Version tested
 = 1.0.4 - 2020/02/20 =
