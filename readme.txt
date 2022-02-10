@@ -30,10 +30,10 @@ You can create a Backup from Htaccess --> Backup Menu and you can edit .htaccess
 
 == Frequently Asked Questions ==
 
-= Can create or edit the htaccess file =
+= Can create or edit the htaccess file? =
 Sorry, we can’t change the file access privileges set by your server. You’ll have to edit the file via FTP.
 
-= I edited my htaccess file and now my site does not work =
+= I edited my htaccess file and now my site does not work? =
 You probably have a syntax error in the file or on the server you are not allowed any of the settings in your htaccess file.
 Try to restore the original backup file. If restoration is not possible with this plugin, restore the backup file from the folder “wp-content ” manually.
 
