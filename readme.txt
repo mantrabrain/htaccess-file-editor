@@ -13,6 +13,8 @@ Simple editor htaccess file without using FTP client.
 
 == Description ==
 
+Simple editor htaccess file without using FTP client.
+
 Simple editor *htaccess* file without using FTP client.
 **This plugin should be used only by experienced users!**
 

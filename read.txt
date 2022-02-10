@@ -1,0 +1,30 @@
+Description
+
+Htaccess File Editor is a fast, safe and simple yet perfect to edit the WordPress site's .htaccess file from admin panel. You can create a backup of your .htaccess file and can be restored from WordPress Dashboard.
+
+You can create a Backup from Htaccess --> Backup Menu. Also you can edit from Htaccess Menu.
+
+This plugin should be used only by experienced users!
+
+FAQ
+
+Can create or edit the htaccess file
+
+Sorry, we can’t change the file access privileges set by your server. You’ll have to edit the file via FTP.
+
+
+I edited my htaccess file and now my site does not work
+
+You probably have a syntax error in the file or on the server you are not allowed any of the settings in your htaccess file.
+Try to restore the original backup file. If restoration is not possible with this plugin, restore the backup file from the folder “wp-content ” manually.
+
+
+How do i get support?
+Please go to our support forums. We’ll gladly help you.
+
+
+
+
+
+
+
