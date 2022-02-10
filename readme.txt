@@ -17,6 +17,11 @@ Htaccess File Editor is a fast, safe and simple yet perfect to edit the WordPres
 You can create a Backup from Htaccess --> Backup Menu. Also you can edit from Htaccess Menu.
 **This plugin should be used only by experienced users!**
 
+== Features ==
+1. Edit .htaccess file easily
+2. Create Backup .htaccess file
+3. Restore  old .htaccess backup
+
 == Installation ==
 
 1. Extract the zip into the *wp-content/plugins* directory
