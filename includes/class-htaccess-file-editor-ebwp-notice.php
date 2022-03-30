@@ -2,8 +2,10 @@
 /**
  * Admin notice to download Everest Backup.
  *
- * @package   Htaccess_File_Editor
+ * @package Everest_Themes_Framework
  */
+
+namespace Everest_Themes_Framework;
 
 /**
  * Exit if accessed directly.
@@ -15,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Everest Backup plugin notice class.
  */
-class  Htaccess_File_Editor_Ebwp_Notice {
+class Htaccess_File_Editor_Ebwp_Notice {
 
 	const EBWP_SLUG = 'everest-backup/everest-backup.php';
 
@@ -32,15 +34,24 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 	protected $user_id                = 0;
 	protected $expire_after_transient = '';
 	protected $install_activate       = false;
-	protected $user_consent           = true;
 
 	/**
 	 * Init class.
 	 */
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'on_form_submit' ) );
-		add_action( 'htaccess_file_editor_after_ebwp_banner', array( $this, 'after_ebwp_banner' ) );
+		if ( defined( 'EVEREST_THEMES_EBWP_NOTICE_LOADED' ) ) {
 
+			/**
+			 * Bail if notice already loaded.
+			 */
+			return;
+		}
+
+		define( 'EVEREST_THEMES_EBWP_NOTICE_LOADED', true );
+
+		add_action( 'admin_init', array( $this, 'on_form_submit' ) );
+		add_action( 'admin_head', array( $this, 'notice_styles' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notice' ) );
 	}
 
 	/**
@@ -101,16 +112,11 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 	 */
 	protected function install_and_activate() {
 
-		if ( ! isset( $_POST['user_consent'] ) ) {
-			$this->user_consent = false;
-			return;
-		}
-
 		$plugins_dir = WP_PLUGIN_DIR;
 
 		$plugin        = self::EBWP_SLUG;
 		$plugin_folder = dirname( $plugins_dir . DIRECTORY_SEPARATOR . $plugin );
-		$plugin_zip    = wp_normalize_path( $plugin_folder . '.zip' );
+		$plugin_zip    = $plugin_folder . '.zip';
 
 		$package = self::PACKAGE_URL;
 
@@ -145,15 +151,11 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 
 		unlink( $plugin_zip );
 
-		wp_cache_flush();
+		wp_cache_delete( 'plugins', 'plugins' );
 
 		if ( ! is_wp_error( activate_plugin( $plugin, '', is_multisite() ) ) ) {
 			$this->install_activate = true;
 		};
-
-		if ( wp_safe_redirect( admin_url( '/admin.php?page=htaccess-file-editor' ) ) ) {
-			exit;
-		}
 
 	}
 
@@ -190,6 +192,7 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 	 * @return void
 	 */
 	public function on_form_submit() {
+
 		$this->user_id = get_current_user_id();
 
 		$this->expire_after_transient = self::META_EXPIRE_AFTER . '_' . $this->user_id;
@@ -215,15 +218,122 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 
 	}
 
+	/**
+	 * Styles for notice.
+	 *
+	 * @return void
+	 */
+	public function notice_styles() {
+		?>
+		<style>
+			#everest-themes-framework-ebwp-notice {
+				background: rgb(255,255,255);
+				background: linear-gradient(90deg, rgb(245 245 245) 0%, rgb(255 255 255) 100%);
+				display: flex;
+				align-items: start;
+				flex-direction: column;
+				overflow: hidden;
+				border: 3px solid #ffffff;
+				margin: 15px 0 !important;
+				padding: 0 !important;
+				box-shadow: 0 1px 4px rgb(0 0 0 / 15%);
+			}
+
+			#everest-themes-framework-ebwp-notice .message.et-notice-message {
+				width: 100%;
+				padding: 10px;
+			}
+
+			#everest-themes-framework-ebwp-notice .message.et-notice-message img {
+				width: 53px;
+				float: left;
+				margin-right: 10px;
+			}
+
+			#everest-themes-framework-ebwp-notice .et-notice-message h1{
+				margin: 0; padding: 0;
+				font-size: 24px;
+				font-weight: 400;
+			}
+			#everest-themes-framework-ebwp-notice .et-notice-message p {
+				font-size: 14px;
+				margin: 0;
+			}
+			#everest-themes-framework-ebwp-notice .et-notice-message p strong {
+				color: #2271B1;
+			}
+			.et-notice-actions {
+				width: 100%;
+				padding: 10px 10px 15px;
+				background: linear-gradient(90deg, rgb(234 234 235) 0%, rgb(255 255 255) 100%);
+			}
+			#everest-themes-framework-ebwp-notice .et-notice-actions button, #everest-themes-framework-ebwp-notice .et-notice-actions a.button-primary{
+				margin: 8px 8px 0 0 !important;
+			}
+		</style>
+		<?php
+	}
 
 	/**
 	 * Admin notice to download Everest Backup.
 	 */
-	public function after_ebwp_banner() {
+	public function admin_notice() {
+
+		if ( $this->install_activate ) {
+			?>
+			<div id="everest-themes-framework-ebwp-notice" class="notice is-dismissible">
+				<div class="message et-notice-message">
+
+					<img class="logo-icon" src="<?php echo esc_url( self::LOGO_URL ); ?>">
+
+					<h1><?php esc_html_e( 'Thank You !!!', 'htaccess-file-editor' ); ?></h1>
+
+					<?php
+
+					$plugin_link = '<strong><a href="//wordpress.org/plugins/everest-backup/" target="_blank">Everest Backup</a></strong>';
+
+					/* translators: %s is the Everest Backup plugin name wrapped with html. */
+					$string = sprintf( __( '%s has been installed and activated successfully.', 'htaccess-file-editor' ), $plugin_link );
+
+					echo wp_kses_post( wpautop( $string ) );
+					?>
+
+				</div>
+			</div>
+			<?php
+		}
+
+		$status = $this->get_plugin_status();
+
+		if ( 'active' === $status ) {
+
+			/**
+			 * Bail early if plugin is active.
+			 */
+			return;
+		}
+
+		/**
+		 * ===========================
+		 * If we are here,
+		 * then Everest Backup plugin
+		 * is either not active
+		 * or not installed at all.
+		 * ===========================
+		 */
 
 		$user_id = $this->user_id;
 
 		$action_type = get_user_meta( $user_id, self::META_ACTION_TYPE, true );
+
+		if ( 'never' === $action_type ) {
+
+			/**
+			 * Bail if user don't want to keep their data safe and secure :P .
+			 */
+			return;
+		}
+
 		/**
 		 * If user selects remind.
 		 */
@@ -233,82 +343,54 @@ class  Htaccess_File_Editor_Ebwp_Notice {
 			return;
 		}
 
-		$status = $this->get_plugin_status();
-
-		if ( 'active' === $status ) {
-			return;
-		}
-
 		/**
 		 * If we are here, then lets disturb our user :D.
 		 */
 		?>
-			<aside class="htaccess-file-editor-sidebar">
-				<div class="htaccess-banner">
-				<img src="<?php echo esc_url( HTACCESS_FILE_EDITOR_PLUGIN_URI . '/assets/images/everest-backup-banner.png' ); ?>" />
+		<div id="everest-themes-framework-ebwp-notice" class="notice">
+			<div class="message et-notice-message">
 
-					<form method="post" class="btn-group">
-						<?php
-							wp_nonce_field( self::KEY_SUBMIT, self::KEY_SUBMIT );
-						if ( 'not-installed' === $status ) {
-							?>
+				<img class="logo-icon" src="<?php echo esc_url( self::LOGO_URL ); ?>">
 
-							<label class="user-consent" for="user-consent">
-								<input type="checkbox" name="user_consent" id="user-consent">
-								<span><?php esc_html_e( 'By clicking "Install & Activate" button, you agree to install and activate "Everest Backup" plugin in your website.', 'htaccess-file-editor' ); ?></span>
-								<?php
-								if ( ! $this->user_consent ) {
-									?>
-									<style>
-										.user-consent {
-											position: relative;
-											padding: 20px 5px 0px;
-										}
-										label.user-consent:after {
-											position: absolute;
-											content: '<?php esc_html_e( '*This field is required!', 'htaccess-file-editor' ); ?>';
-											background: red;
-											top: -8px;
-											left: 0;
-											padding: 2px 5px;
-											color: #ffffff;
-										}
-										label.user-consent:before {
-											position: absolute;
-											content: '';
-											background: #ff0000;
-											width: 7px;
-											height: 7px;
-											top: 11px;
-											left: 8px;
-											color: #ffffff;
-											z-index: 1;
-											transform: rotate(45deg);
-										}
-									</style>
-									<?php
-								}
-								?>
-							</label>
+				<h1><?php esc_html_e( 'Your website is super precious !', 'htaccess-file-editor' ); ?></h1>
+				<?php
 
-							<button name="install" value="1"  class="button button-install"><?php esc_html_e( 'Install & Activate', 'htaccess-file-editor' ); ?></button>
-							<button name="remind" value="1"  class="button"><?php esc_html_e( 'Remind me later', 'htaccess-file-editor' ); ?></button>
-							<?php
-						} else {
+				$plugin_link = '<strong><a href="//wordpress.org/plugins/everest-backup/" target="_blank">Everest Backup</a></strong>';
 
-							/**
-							 * If we are here then plugin is installed but yet not activated.
-							 */
+				if ( 'not-installed' === $status ) {
+					/* translators: %s is the Everest Backup plugin name wrapped with html. */
+					$string = sprintf( __( 'The best way to protect your website is by using %s plugin to keep your data safe and secure to remote storage..', 'htaccess-file-editor' ), $plugin_link );
+				} else {
+					/* translators: %s is the Everest Backup plugin name wrapped with html. */
+					$string = sprintf( __( 'You are just one step away. Please activate %s plugin and backup your website to keep your data safe and secure.', 'htaccess-file-editor' ), $plugin_link );
+				}
 
-							$activation_link = $this->get_plugin_activation_link();
-							?>
-							<a href="<?php echo esc_url( $activation_link ); ?>" class="button button-install"><?php esc_html_e( 'Activate Plugin', 'htaccess-file-editor' ); ?></a>
-							<?php
-						}
-						?>
-					</form>
-				</div>
-			</aside>
+				echo wp_kses_post( wpautop( $string ) );
+				?>
+			</div>
+
+			<div class="et-notice-actions">
+			<form method="post">
+				<?php
+				wp_nonce_field( self::KEY_SUBMIT, self::KEY_SUBMIT );
+
+				if ( 'not-installed' === $status ) {
+					?>
+					<button name="install" value="1" class="button-primary"><?php esc_html_e( 'Install & Activate', 'htaccess-file-editor' ); ?></button>
+					<button name="remind" value="1" class="button"><?php esc_html_e( 'Remind me later', 'htaccess-file-editor' ); ?></button>
+					<button name="never" value="1" class="button-link"><?php esc_html_e( "Don't show this again", 'htaccess-file-editor' ); ?></button>
+					<?php
+				} else {
+					$activation_link = $this->get_plugin_activation_link();
+
+					?>
+					<a href="<?php echo esc_url( $activation_link ); ?>" class="button-primary"><?php esc_html_e( 'Activate Plugin', 'htaccess-file-editor' ); ?></a>
+					<?php
+				}
+				?>
+			</form>
+			</div>
+		</div>
 		<?php
 	}
 
