@@ -21,7 +21,7 @@ You can create a Backup from Htaccess --> Backup Menu and you can edit .htaccess
 2. Create Backup of .htaccess file
 3. Restore  old .htaccess backup
 
-== MORE PRODUCT FROM US ==
+== MORE PRODUCTS FROM US ==
 >**[Yatra WordPress Travel Booking Plugin](https://wpyatra.com/?ref=wporghtaccess)**
 >Yatra is a free, SEO friendly & scalable WordPress travel booking plugin to create travel and tour packages for tour operators and travel agencies. [View Details](https://wpyatra.com/?ref=wporghtaccess)
 
