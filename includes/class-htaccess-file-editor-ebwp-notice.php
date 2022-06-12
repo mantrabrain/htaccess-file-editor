@@ -373,7 +373,7 @@ class Htaccess_File_Editor_Ebwp_Notice
                     $string = sprintf(__('Create travel/trip booking website using %s plugin', 'htaccess-file-editor'), $plugin_link);
                 } else {
                     /* translators: %s is the Everest Backup plugin name wrapped with html. */
-                    $string = sprintf(__('You are just one step away. Please activate %s plugin and backup your website to keep your data safe and secure.', 'htaccess-file-editor'), $plugin_link);
+                    $string = sprintf(__('Create travel/trip booking website using %s plugin', 'htaccess-file-editor'), $plugin_link);
                 }
 
                 echo wp_kses_post(wpautop($string));
