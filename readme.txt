@@ -2,10 +2,10 @@
 Contributors: mantrabrain
 Author URI: https://mantrabrain.com
 Tags: htaccess, htaccess editor, htaccess backup, htaccess restore
-Version: 1.0.14
+Version: 1.0.15
 Requires at least: 3.0
-Tested up to: 6.0
-Stable tag: 1.0.14
+Tested up to: 6.1
+Stable tag: 1.0.15
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
@@ -48,5 +48,5 @@ Please go to our support forums. We’ll gladly help you.
 
 == Changelog ==
 
-= 1.0.14 - 2022/06/12 =
-* Fixed : Minor issue fixed
+= 1.0.15 - 2022/11/06 =
+* Fixed : Compatibility to 6.1
