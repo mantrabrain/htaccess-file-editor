@@ -3,12 +3,12 @@
 Plugin Name: Htaccess File Editor
 Plugin URI: https://mantrabrain.com/
 Description: Simple editor htaccess file without using FTP client.
-Version: 1.0.15
+Version: 1.0.16
 Text Domain: htaccess-file-editor
-Author: Mantrabrain
+Author: MantraBrain
 Author URI: https://mantrabrain.com
 Requires at least: 3.0.0
-Tested up to: 6.1
+Tested up to: 6.3
 License: GPLv2 or later
 */
 

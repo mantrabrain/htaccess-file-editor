@@ -1,11 +1,11 @@
 === Htaccess File Editor - Easily Edit, Backup, Restore .htaccess file ===
-Contributors: mantrabrain
+Contributors: MantraBrain, gangadharkashyap
 Author URI: https://mantrabrain.com
 Tags: htaccess, htaccess editor, htaccess backup, htaccess restore
-Version: 1.0.15
+Version: 1.0.16
 Requires at least: 3.0
-Tested up to: 6.1
-Stable tag: 1.0.15
+Tested up to: 6.3
+Stable tag: 1.0.16
 License: GPLv2 or later
 
 Simple editor htaccess file without using FTP client.
